@@ -1,0 +1,12 @@
+{
+  "name": "codeatlas-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CodeAtlas: AI Developer Workspace (VS Code Extension + Node/Express + MongoDB)",
+  "scripts": {
+    "start:backend": "cd backend && npm start",
+    "dev:backend": "cd backend && npm run dev",
+    "build:webview": "cd extension/webview && npm run build",
+    "install:all": "cd backend && npm install && cd ../extension/webview && npm install"
+  }
+}

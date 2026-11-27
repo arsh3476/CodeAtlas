@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  background-color: #0a0c10;
+  color: #c9d1d9;
+}
+
+/* Custom crisp scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #232936;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #353f52;
+}
+
+pre, code {
+  font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace;
+}
+
+/* Rich Markdown Rendering Styles (GitHub Dark Aesthetic) */
+.markdown-body {
+  color: #d1d7e0;
+}
+
+.markdown-body h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid #232936;
+}
+
+.markdown-body h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #34d399; /* emerald-400 */
+  margin-top: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.markdown-body h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #38bdf8; /* sky-400 */
+  margin-top: 0.75rem;
+  margin-bottom: 0.3rem;
+}
+
+.markdown-body p {
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+}
+
+.markdown-body ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 0.6rem;
+}
+
+.markdown-body ol {
+  list-style-type: decimal;
+  padding-left: 1.25rem;
+  margin-bottom: 0.6rem;
+}
+
+.markdown-body li {
+  margin-bottom: 0.25rem;
+}
+
+.markdown-body code {
+  font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace;
+  font-size: 0.85em;
+  background-color: #161e2a;
+  color: #6ee7b7;
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+  border: 1px solid #27364b;
+}
+
+.markdown-body pre {
+  background-color: #080a0f;
+  border: 1px solid #232936;
+  border-radius: 6px;
+  padding: 0.75rem;
+  margin: 0.6rem 0;
+  overflow-x: auto;
+}
+
+.markdown-body pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  color: #e2e8f0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Rich Tables */
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75rem 0;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #232936;
+}
+
+.markdown-body th {
+  background-color: #141923;
+  color: #f1f5f9;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #232936;
+}
+
+.markdown-body td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #232936;
+  vertical-align: top;
+}
+
+.markdown-body tr:nth-child(even) td {
+  background-color: #0e1219;
+}
+
+.markdown-body blockquote {
+  border-left: 3px solid #10b981;
+  padding-left: 0.75rem;
+  color: #94a3b8;
+  margin: 0.6rem 0;
+  font-style: italic;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+.markdown-body a {
+  color: #38bdf8;
+  text-decoration: underline;
+}

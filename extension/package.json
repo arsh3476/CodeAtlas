@@ -1,0 +1,89 @@
+{
+  "name": "codeatlas",
+  "displayName": "CodeAtlas - AI Developer Workspace",
+  "description": "Understand code, generate and improve code with AI, and track team handovers",
+  "version": "1.0.0",
+  "publisher": "CodeAtlasTeam",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Machine Learning",
+    "Collaboration"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "codeatlas-sidebar",
+          "title": "CodeAtlas",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "codeatlas-sidebar": [
+        {
+          "type": "webview",
+          "id": "codeatlas.sidebarView",
+          "name": "CodeAtlas Workspace"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "codeatlas.openSidebar",
+        "title": "CodeAtlas: Open Workspace in Sidebar",
+        "icon": "$(layout-sidebar-left)"
+      },
+      {
+        "command": "codeatlas.openTab",
+        "title": "CodeAtlas: Open Full Workspace Tab",
+        "icon": "$(split-horizontal)"
+      },
+      {
+        "command": "codeatlas.explainSelection",
+        "title": "CodeAtlas: Explain Selected Code",
+        "icon": "$(sparkle)"
+      },
+      {
+        "command": "codeatlas.generateCode",
+        "title": "CodeAtlas: Generate / Refactor Code",
+        "icon": "$(code)"
+      },
+      {
+        "command": "codeatlas.createHandover",
+        "title": "CodeAtlas: Create Shift Handover",
+        "icon": "$(git-pull-request)"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "codeatlas.explainSelection",
+          "group": "CodeAtlas@1"
+        },
+        {
+          "command": "codeatlas.generateCode",
+          "group": "CodeAtlas@2"
+        },
+        {
+          "command": "codeatlas.createHandover",
+          "group": "CodeAtlas@3"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "codeatlas.openTab",
+          "when": "view == codeatlas.sidebarView",
+          "group": "navigation"
+        }
+      ]
+    }
+  }
+}
